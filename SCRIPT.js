@@ -122,7 +122,7 @@ document.getElementById('apply-promo').addEventListener('click', () => {
 const slider = document.querySelector('.snap-slider');
 
 slider.addEventListener('scroll', () => {
-    const cards = document.querySelectorAll('.snap-card');
+    const cards = document.querySelectorAll('.snap-card, .snap-slide');
     const sliderCenter = slider.scrollLeft + slider.offsetWidth / 2;
 
     cards.forEach(card => {
