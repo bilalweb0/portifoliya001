@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Food — Mega Store</title>
+    <link rel="stylesheet" href="./css.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Cyber<span>Food</span></div>
+        <div class="nav-controls">
+            <button id="theme-toggle" class="icon-btn">🌙</button>
+            <button id="cart-btn" class="cart-btn">🛒 <span id="cart-count">0</span> (<span id="cart-total-header">0</span> ₽)</button>
+        </div>
+    </nav>
+<section class="slider-container">
+    <h2 class="section-title">✨ Наши Бестселлеры (Листай вбок)</h2>
+    <div class="snap-slider">
+        <div class="snap-card highlight">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800" alt="Food">
+            <div class="card-overlay">
+                <span class="tag">TOP 1</span>
+                <h3>Пицца "Неоновый Дракон"</h3>
+                <button class="add-btn" data-name="Пицца Неоновый Дракон" data-price="950">950 ₽</button>
+            </div>
+        </div>
+        <div class="snap-card">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800" alt="Food">
+            <div class="card-overlay">
+                <span class="tag">NEW</span>
+                <h3>Мега-Бургер 4x4</h3>
+                <button class="add-btn" data-name="Мега-Бургер 4x4" data-price="780">780 ₽</button>
+            </div>
+        </div>
+        <div class="snap-card">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800" alt="Food">
+            <div class="card-overlay">
+                <span class="tag">HEALTHY</span>
+                <h3>Боул с тунцом</h3>
+                <button class="add-btn" data-name="Боул с тунцом" data-price="620">620 ₽</button>
+            </div>
+        </div>
+        <div class="snap-card">
+            <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=800" alt="Food">
+            <div class="card-overlay">
+                <h3>Сет "Кибер-Ниндзя"</h3>
+                <button class="add-btn" data-name="Сет Кибер-Ниндзя" data-price="1800">1800 ₽</button>
+            </div>
+        </div>
+        <div class="snap-card">
+            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800" alt="Food">
+            <div class="card-overlay">
+                <h3>Стейк Рибай XXL</h3>
+                <button class="add-btn" data-name="Стейк Рибай XXL" data-price="2100">2100 ₽</button>
+            </div>
+        </div>
+        <div class="snap-card">
+            <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800" alt="Food">
+            <div class="card-overlay">
+                <h3>Пончики-Глазурь</h3>
+                <button class="add-btn" data-name="Пончики-Глазурь" data-price="400">400 ₽</button>
+            </div>
+        </div>
+        <div class="snap-card">
+            <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=800" alt="Food">
+            <div class="card-overlay">
+                <h3>Крафтовый Лимонад</h3>
+                <button class="add-btn" data-name="Крафтовый Лимонад" data-price="350">350 ₽</button>
+            </div>
+        </div>
+        <div class="snap-card">
+            <img src="https://images.unsplash.com/photo-1563379091339-03b21ec4a4f8?w=800" alt="Food">
+            <div class="card-overlay">
+                <h3>Паста Карбонара</h3>
+                <button class="add-btn" data-name="Паста Карбонара" data-price="550">550 ₽</button>
+            </div>
+        </div>
+        <div class="snap-card">
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800" alt="Food">
+            <div class="card-overlay">
+                <h3>Супер-Салат</h3>
+                <button class="add-btn" data-name="Супер-Салат" data-price="490">490 ₽</button>
+            </div>
+        </div>
+        <div class="snap-card">
+            <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=800" alt="Food">
+            <div class="card-overlay">
+                <h3>Торт "Кибер-Панк"</h3>
+                <button class="add-btn" data-name="Торт Кибер-Панк" data-price="1200">1200 ₽</button>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="slider-section">
+        <h2 class="section-title">🔥 Топ этой недели </h2>
+        <div class="snap-slider">
+            <div class="snap-slide">
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800" alt="Пицца">
+                <div class="slide-info">
+                    <h3>Метровая Пицца</h3>
+                    <button class="add-btn" data-name="Метровая Пицца" data-price="1500">В корзину — 1500 ₽</button>
+                </div>
+            </div>
+            <div class="snap-slide">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800" alt="Бургер">
+                <div class="slide-info">
+                    <h3>Башня Бургер</h3>
+                    <button class="add-btn" data-name="Башня Бургер" data-price="990">В корзину — 990 ₽</button>
+                </div>
+            </div>
+            </div>
+    </section>
+
+    <div class="filters">
+        <button class="filter-btn active" data-filter="all">Все</button>
+        <button class="filter-btn" data-filter="pizza">Пицца</button>
+        <button class="filter-btn" data-filter="burger">Бургеры</button>
+        <button class="filter-btn" data-filter="sushi">Суши</button>
+        <button class="filter-btn" data-filter="drink">Напитки</button>
+    </div>
+
+    <section class="menu-section">
+        <div class="html-grid" id="main-grid">
+            
+            <div class="food-card" data-category="burger">
+                <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400" alt="Еда">
+                <div class="card-text">
+                    <h3>Классик Чиз</h3>
+                    <p class="price">350 ₽</p>
+                    <button class="add-btn" data-name="Классик Чиз" data-price="350">Добавить</button>
+                </div>
+            </div>
+            <div class="food-card" data-category="burger">
+                <img src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=400" alt="Еда">
+                <div class="card-text">
+                    <h3>Дабл Трабл Бургер</h3>
+                    <p class="price">550 ₽</p>
+                    <button class="add-btn" data-name="Дабл Трабл Бургер" data-price="550">Добавить</button>
+                </div>
+            </div>
+            <div class="food-card" data-category="burger">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400" alt="Еда">
+                <div class="card-text">
+                    <h3>Веган Бургер</h3>
+                    <p class="price">420 ₽</p>
+                    <button class="add-btn" data-name="Веган Бургер" data-price="420">Добавить</button>
+                </div>
+            </div>
+
+            <div class="food-card" data-category="pizza">
+                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=400" alt="Еда">
+                <div class="card-text">
+                    <h3>Пепперони XXL</h3>
+                    <p class="price">750 ₽</p>
+                    <button class="add-btn" data-name="Пепперони XXL" data-price="750">Добавить</button>
+                </div>
+            </div>
+            <div class="food-card" data-category="pizza">
+                <img src="https://images.unsplash.com/photo-1512152272829-e3139592d56f?w=400" alt="Еда">
+                <div class="card-text">
+                    <h3>Маргарита</h3>
+                    <p class="price">500 ₽</p>
+                    <button class="add-btn" data-name="Маргарита" data-price="500">Добавить</button>
+                </div>
+            </div>
+            <div class="food-card" data-category="pizza">
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400" alt="Еда">
+                <div class="card-text">
+                    <h3>Сырный Цыпленок</h3>
+                    <p class="price">680 ₽</p>
+                    <button class="add-btn" data-name="Сырный Цыпленок" data-price="680">Добавить</button>
+                </div>
+            </div>
+
+            <div class="food-card" data-category="sushi">
+                <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?w=400" alt="Еда">
+                <div class="card-text">
+                    <h3>Филадельфия Классик</h3>
+                    <p class="price">590 ₽</p>
+                    <button class="add-btn" data-name="Филадельфия" data-price="590">Добавить</button>
+                </div>
+            </div>
+            <div class="food-card" data-category="sushi">
+                <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?w=400" alt="Еда">
+                <div class="card-text">
+                    <h3>Сет "Дракон"</h3>
+                    <p class="price">1200 ₽</p>
+                    <button class="add-btn" data-name="Сет Дракон" data-price="1200">Добавить</button>
+                </div>
+            </div>
+            <div class="food-card" data-category="sushi">
+                <img src="https://images.unsplash.com/photo-1583623025817-d180a2221d0a?w=400" alt="Еда">
+                <div class="card-text">
+                    <h3>Запеченный ролл</h3>
+                    <p class="price">450 ₽</p>
+                    <button class="add-btn" data-name="Запеченный ролл" data-price="450">Добавить</button>
+                </div>
+            </div>
+
+            <div class="food-card" data-category="drink">
+                <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=400" alt="Еда">
+                <div class="card-text">
+                    <h3>Кока-Кола 0.5</h3>
+                    <p class="price">120 ₽</p>
+                    <button class="add-btn" data-name="Кока-Кола" data-price="120">Добавить</button>
+                </div>
+            </div>
+            <div class="food-card" data-category="drink">
+                <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?w=400" alt="Еда">
+                <div class="card-text">
+                    <h3>Апельсиновый Фреш</h3>
+                    <p class="price">250 ₽</p>
+                    <button class="add-btn" data-name="Фреш" data-price="250">Добавить</button>
+                </div>
+            </div>
+            <div class="food-card" data-category="drink">
+                <img src="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w=400" alt="Еда">
+                <div class="card-text">
+                    <h3>Милкшейк Клубника</h3>
+                    <p class="price">300 ₽</p>
+                    <button class="add-btn" data-name="Милкшейк" data-price="300">Добавить</button>
+                </div>
+            </div>
+
+            </div>
+    </section>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <h2>Твой заказ</h2>
+            <div id="cart-items-list"></div>
+            
+            <div class="promo-box">
+                <input type="text" id="promo-input" placeholder="Промокод (введи CYBER10)">
+                <button id="apply-promo">Применить</button>
+            </div>
+
+            <div class="cart-summary">
+                <p>Итого: <strong id="modal-total">0</strong> ₽</p>
+            </div>
+            <a href="#" id="tg-order-link" class="tg-btn">🚀 ЗАКАЗАТЬ В ТЕЛЕГРАМ</a>
+        </div>
+    </div>
+    
+      
+        
+   
+    <script src="./SCRIPT.js"></script>
+</body>
+</html>

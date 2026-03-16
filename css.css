@@ -1,0 +1,197 @@
+:root {
+    --bg-grad: linear-gradient(135deg, #4facfe 0%, #f093fb 100%);
+    --bg-color: #f5f7fa;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --blue: #4facfe;
+    --pink: #f093fb;
+}
+
+/* ТЕМНАЯ ТЕМА */
+:root.dark {
+    --bg-grad: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    --bg-color: #1a1a2e;
+    --card-bg: #0f3460;
+    --text-color: #e94560;
+}
+
+body {
+    margin: 0; font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--bg-grad); background-attachment: fixed;
+    color: var(--text-color); padding-bottom: 50px;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Навигация */
+.navbar {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 15px 5%; background: var(--card-bg);
+    position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: background 0.3s;
+}
+
+.logo { font-size: 1.8rem; font-weight: 900; color: var(--blue); }
+.logo span { color: var(--pink); }
+
+.nav-controls { display: flex; gap: 15px; }
+.icon-btn, .cart-btn {
+    background: var(--bg-color); border: none; padding: 10px 20px;
+    border-radius: 20px; cursor: pointer; font-weight: bold; color: var(--text-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.section-title { color: white; text-align: center; margin: 40px 0 20px; }
+
+/* Слайдер */
+.snap-slider {
+    display: flex; overflow-x: auto; gap: 20px; padding: 20px 5%;
+    scroll-snap-type: x mandatory; scrollbar-width: none;
+}
+.snap-slider::-webkit-scrollbar { display: none; }
+.snap-slide {
+    flex: 0 0 85%; max-width: 500px; height: 350px; border-radius: 30px;
+    scroll-snap-align: center; position: relative; overflow: hidden;
+}
+.snap-slide img { width: 100%; height: 100%; object-fit: cover; }
+.slide-info {
+    position: absolute; bottom: 0; width: 100%; padding: 20px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9)); color: white;
+}
+
+/* Фильтры */
+.filters {
+    display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;
+    padding: 20px 5%;
+}
+.filter-btn {
+    background: var(--card-bg); color: var(--text-color); border: 2px solid var(--blue);
+    padding: 10px 20px; border-radius: 50px; cursor: pointer; font-weight: bold;
+}
+.filter-btn.active { background: var(--blue); color: white; }
+
+/* Сетка карточек */
+.html-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 25px; padding: 0 5%;
+}
+
+.food-card {
+    background: var(--card-bg); border-radius: 20px; overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); transition: 0.3s;
+}
+.food-card img { width: 100%; height: 200px; object-fit: cover; }
+.card-text { padding: 20px; text-align: center; }
+.price { font-size: 1.3rem; font-weight: bold; color: var(--pink); margin: 10px 0; }
+
+.add-btn {
+    background: var(--blue); color: white; border: none; width: 100%;
+    padding: 12px; border-radius: 12px; font-weight: bold; cursor: pointer;
+}
+
+/* МОДАЛЬНОЕ ОКНО КОРЗИНЫ */
+.modal {
+    display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5); z-index: 2000; justify-content: center; align-items: center;
+}
+.modal.show { display: flex; }
+.modal-content {
+    background: var(--card-bg); padding: 30px; border-radius: 30px;
+    width: 90%; max-width: 500px; max-height: 80vh; overflow-y: auto;
+    position: relative; color: var(--text-color);
+}
+.close { position: absolute; top: 20px; right: 25px; font-size: 30px; cursor: pointer; }
+
+.cart-item {
+    display: flex; justify-content: space-between; padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+.del-btn { background: #ff4b2b; color: white; border: none; border-radius: 5px; cursor: pointer; }
+
+.promo-box { display: flex; gap: 10px; margin: 20px 0; }
+.promo-box input { flex: 1; padding: 10px; border-radius: 10px; border: 1px solid #ccc; }
+.promo-box button { background: var(--text-color); color: var(--card-bg); border: none; padding: 10px; border-radius: 10px; cursor: pointer;}
+
+.tg-btn {
+    display: block; text-align: center; background: var(--blue); color: white;
+    padding: 15px; border-radius: 50px; text-decoration: none; font-weight: bold;
+    margin-top: 20px;
+}
+/* Настройки слайдера */
+.slider-container {
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+.snap-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 0 10%; /* Отступы, чтобы центрировать карточки */
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Скрываем скроллбар в Firefox */
+    -webkit-overflow-scrolling: touch; /* Плавность на iOS */
+}
+
+.snap-slider::-webkit-scrollbar {
+    display: none; /* Скрываем скроллбар в Chrome/Safari */
+}
+
+.snap-card {
+    flex: 0 0 80%; /* Ширина одной карточки 80% от экрана */
+    max-width: 400px;
+    height: 500px;
+    background: #fff;
+    border-radius: 35px;
+    position: relative;
+    overflow: hidden;
+    scroll-snap-align: center; /* Центровка при остановке */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    transition: transform 0.4s ease;
+}
+
+/* Эффект увеличения активной карточки (опционально через JS) */
+.snap-card.active {
+    transform: scale(1.05);
+}
+
+.snap-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.85));
+    color: white;
+}
+
+.tag {
+    background: #f093fb;
+    padding: 5px 12px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.card-overlay h3 {
+    margin: 5px 0 15px;
+    font-size: 1.5rem;
+}
+
+.card-overlay .add-btn {
+    background: #fff;
+    color: #4facfe;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
