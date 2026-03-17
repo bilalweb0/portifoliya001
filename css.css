@@ -33,7 +33,18 @@ body {
 .logo { font-size: 1.8rem; font-weight: 900; color: var(--blue); }
 .logo span { color: var(--pink); }
 
-.nav-controls { display: flex; gap: 15px; }
+.nav-controls { display: flex; gap: 15px; align-items: center; }
+.social-links { display: flex; gap: 10px; }
+.social-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 20px;
+    background: var(--bg-color);
+    transition: background 0.3s;
+}
+.social-link:hover { background: var(--blue); color: white; }
 .icon-btn, .cart-btn {
     background: var(--bg-color); border: none; padding: 10px 20px;
     border-radius: 20px; cursor: pointer; font-weight: bold; color: var(--text-color);
@@ -79,6 +90,7 @@ body {
     background: var(--card-bg); border-radius: 20px; overflow: hidden;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1); transition: 0.3s;
 }
+.food-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
 .food-card img { width: 100%; height: 200px; object-fit: cover; }
 .card-text { padding: 20px; text-align: center; }
 .price { font-size: 1.3rem; font-weight: bold; color: var(--pink); margin: 10px 0; }
@@ -86,7 +98,9 @@ body {
 .add-btn {
     background: var(--blue); color: white; border: none; width: 100%;
     padding: 12px; border-radius: 12px; font-weight: bold; cursor: pointer;
+    transition: background 0.3s;
 }
+.add-btn:hover { background: var(--pink); }
 
 /* МОДАЛЬНОЕ ОКНО КОРЗИНЫ */
 .modal {
@@ -185,13 +199,14 @@ body {
     font-size: 1.5rem;
 }
 
-.card-overlay .add-btn {
-    background: #fff;
-    color: #4facfe;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 50px;
-    font-weight: bold;
-    cursor: pointer;
+.footer-social { margin-top: 10px; }
+.footer-social .social-link { margin: 0 10px; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar { padding: 10px 2%; flex-direction: column; gap: 10px; }
+    .nav-controls { flex-wrap: wrap; justify-content: center; }
+    .html-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; }
+    .snap-card, .snap-slide { flex: 0 0 90%; max-width: none; }
 }
 
